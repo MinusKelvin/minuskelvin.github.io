@@ -2,16 +2,21 @@ body {
     font-size: 1.25em;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 300;
+    text-align: justify;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+@media(max-width: 600px) {
+    body {
+        text-align: left;
+    }
 }
 
 #title {
     position: sticky;
     top: 0px;
     background-color: white;
-}
-
-a[href="/"] {
-    text-decoration: none;
 }
 
 a, a:visited {
@@ -27,6 +32,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal;
     margin-bottom: 0;
     border-bottom: 1px solid lightgray;
+    text-align: left;
 }
 
 h1, h2 {
@@ -44,6 +50,10 @@ h3 {
 .content {
     margin: auto;
     max-width: 960px;
+}
+
+.content>a:first-child {
+    text-decoration: none;
 }
 
 .socials {
@@ -65,4 +75,21 @@ h3 {
 
 .socials img {
     height: 1em;
+}
+
+.display {
+    width: 100%;
+    display: block;
+}
+
+.display.row {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.display.row.s2 >* {
+    flex: 1;
+    min-width: 360px;
+    max-width: 480px;
 }
